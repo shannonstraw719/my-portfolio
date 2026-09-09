@@ -1,0 +1,414 @@
+/* ================================
+   General Styles
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111713;
+    color: #f1f4f0;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ================================
+   Navigation
+================================ */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(17, 23, 19, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #26352b;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #a8c3a5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #c4cec3;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a8c3a5;
+}
+
+
+/* ================================
+   Hero Section
+================================ */
+
+.hero {
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: auto;
+    padding: 150px 30px 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.eyebrow,
+.section-label {
+    color: #8faa8c;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #a8c3a5;
+}
+
+.hero-description {
+    color: #b7c1b6;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   Buttons
+================================ */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background: #8faa8c;
+    color: #111713;
+}
+
+.primary-button:hover {
+    background: #b1c9ae;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    border: 1px solid #718570;
+    color: #dce4da;
+}
+
+.secondary-button:hover {
+    background: #1d281f;
+    border-color: #a8c3a5;
+}
+
+
+/* ================================
+   Profile Photo
+================================ */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-ring {
+    width: 300px;
+    height: 300px;
+
+    padding: 8px;
+    border: 2px solid #8faa8c;
+    border-radius: 50%;
+}
+
+.profile-ring img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/* ================================
+   Sections
+================================ */
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 110px 30px;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.section > p:not(.section-label) {
+    color: #b7c1b6;
+    max-width: 750px;
+}
+
+
+/* ================================
+   Skills
+================================ */
+
+.skills-grid {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+    background: #182019;
+    border: 1px solid #29372d;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #8faa8c;
+}
+
+.skill-card h3 {
+    color: #a8c3a5;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: #aeb8ad;
+    font-size: 0.9rem;
+}
+
+
+/* ================================
+   Projects
+================================ */
+
+.projects-grid {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+    background: #182019;
+    border: 1px solid #29372d;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #8faa8c;
+}
+
+.project-number {
+    color: #718570;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #aeb8ad;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #243126;
+    color: #a8c3a5;
+    font-size: 0.75rem;
+}
+
+
+/* ================================
+   Education
+================================ */
+
+.education-card {
+    margin-top: 35px;
+    padding: 30px;
+
+    background: #182019;
+    border-left: 3px solid #8faa8c;
+    border-radius: 6px;
+}
+
+.education-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.education-card p {
+    color: #a8c3a5;
+}
+
+.education-card span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8d988c;
+    font-size: 0.85rem;
+}
+
+
+/* ================================
+   Contact
+================================ */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section > p:not(.section-label) {
+    margin: 0 auto 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #a8c3a5;
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+    color: #d1e0ce;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #26352b;
+    color: #7f8a7f;
+    font-size: 0.8rem;
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-ring {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section {
+        text-align: center;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        text-align: left;
+    }
+}
